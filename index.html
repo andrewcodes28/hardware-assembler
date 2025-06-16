@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="left">
+      <textarea id="code"></textarea><br />
+      Current clock speed (<span id="speed">1</span>Hz):
+      <input type="range" id="hz" min="-1" max="9" step="any" /><br />
+      <button id="compile">Compile</button>
+      <button id="reset">Reset</button><button id="step">Step</button
+      ><button id="run">Run</button><br />
+      <div>Length: <span id="size"></span></div>
+      <div>Next Instruction: <span id="info"></span></div>
+    </div>
+    <div id="right">
+      <div>Logs</div>
+      <div id="log"></div>
+      <div>Registers</div>
+      <div id="reg"></div>
+      <div>Memory</div>
+      <div class="center">
+        <table id="mem">
+          <tr>
+            <td class="header">Address</td>
+            <td colspan="16" class="mem">Content</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="output">
+      <canvas id="dist" width="300" height="600"></canvas>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
